@@ -9,6 +9,7 @@ dependencies = [
     "pydantic>=2.7",
     "pydantic-settings>=2.3",
     "pytest>=8.2",
+    "faker>=25.0",
 ]
 
 [tool.pytest.ini_options]

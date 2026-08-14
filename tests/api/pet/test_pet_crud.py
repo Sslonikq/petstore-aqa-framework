@@ -1,18 +1,14 @@
 import pytest
 
 from api import PetApi
-from models import Pet, PetStatus
+from factories import PetFactory
+from models import Pet
 
 
 @pytest.mark.smoke
 @pytest.mark.positive
-def test_create_pet(pet_api: PetApi) -> None:
-    pet = Pet(
-        id=987700001,
-        name="rex",
-        photo_urls=["http://example.com/1.jpg"],
-        status=PetStatus.AVAILABLE,
-    )
+def test_create_pet(pet_api: PetApi, pet_factory: type[PetFactory]) -> None:
+    pet = pet_factory.build()
 
     response = pet_api.create_pet(pet)
 
@@ -23,13 +19,8 @@ def test_create_pet(pet_api: PetApi) -> None:
 
 
 @pytest.mark.positive
-def test_get_pet(pet_api: PetApi) -> None:
-    pet = Pet(
-        id=987700002,
-        name="rex",
-        photo_urls=["http://example.com/1.jpg"],
-        status=PetStatus.AVAILABLE,
-    )
+def test_get_pet(pet_api: PetApi, pet_factory: type[PetFactory]) -> None:
+    pet = pet_factory.build()
     pet_api.create_pet(pet)
 
     response = pet_api.get_pet(pet.id)
