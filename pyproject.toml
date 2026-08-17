@@ -14,6 +14,8 @@ dependencies = [
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+log_level = "INFO"
+log_format = "%(levelname)-5s %(name)s %(message)s"
 markers = [
     "smoke: fast critical-path checks",
     "regression: full regression coverage",

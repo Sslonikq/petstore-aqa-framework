@@ -1,6 +1,7 @@
 import httpx
 
 from config import settings
+from utils import logger, mask_secrets
 
 
 class BaseApiClient:
@@ -24,7 +25,16 @@ class BaseApiClient:
         self._client = httpx.Client(base_url=base_url, headers=headers, timeout=timeout)
 
     def _request(self, method: str, url: str, **kwargs) -> httpx.Response:
-        return self._client.request(method, url, **kwargs)
+        logger.info("%s %s payload=%s", method, url, mask_secrets(kwargs.get("json") or {}))
+        response = self._client.request(method, url, **kwargs)
+        logger.info(
+            "%s %s -> %s (%.2fs)",
+            method,
+            url,
+            response.status_code,
+            response.elapsed.total_seconds(),
+        )
+        return response
 
     def get(self, url: str, **kwargs) -> httpx.Response:
         return self._request("GET", url, **kwargs)
