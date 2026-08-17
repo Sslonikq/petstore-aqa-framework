@@ -14,6 +14,7 @@ dependencies = [
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+addopts = "--strict-markers"
 log_level = "INFO"
 log_format = "%(levelname)-5s %(name)s %(message)s"
 markers = [
