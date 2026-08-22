@@ -29,7 +29,13 @@ class BaseApiClient:
         self._client = httpx.Client(base_url=base_url, headers=headers, timeout=timeout)
 
     def _request(self, method: str, url: str, **kwargs) -> httpx.Response:
-        logger.info("%s %s payload=%s", method, url, mask_secrets(kwargs.get("json") or {}))
+        logger.info(
+            "%s %s params=%s payload=%s",
+            method,
+            url,
+            mask_secrets(kwargs.get("params") or {}),
+            mask_secrets(kwargs.get("json") or {}),
+        )
 
         for attempt in range(1, self._retry_count + 2):
             try:

@@ -2,7 +2,7 @@ import logging
 
 logger = logging.getLogger("petstore")
 
-# httpx пишет собственную строку на каждый запрос — она дублирует нашу, но без тела и времени.
+# httpx пишет собственную строку на каждый запрос - она дублирует нашу, но без тела и времени.
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 # password сюда не добавлен намеренно: в тестах он генерируется Faker и секретом не является.

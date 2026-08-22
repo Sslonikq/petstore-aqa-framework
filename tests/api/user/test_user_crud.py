@@ -32,7 +32,7 @@ def test_get_user(user_api: UserApi, created_user: User) -> None:
     assert received.first_name == created_user.first_name
     assert received.last_name == created_user.last_name
     assert received.email == created_user.email
-    # Наблюдение: API возвращает пароль в открытом виде — в реальной системе это дыра.
+    # Наблюдение: API возвращает пароль в открытом виде, вообще это дыра в реальном.
     assert received.password == created_user.password
     assert received.phone == created_user.phone
 

@@ -17,7 +17,7 @@ def test_create_pet_accepts_empty_name(
     assert response.status_code == 200
 
     # Контракту это не противоречит: required означает «поле передано»,
-    # а не «значение непустое» — minLength в схеме Pet не объявлен.
+    # а не «значение непустое» - minLength в схеме Pet не объявлен.
     stored = pet_api.get_pet(pet.id)
     assert stored.json()["name"] == ""
 

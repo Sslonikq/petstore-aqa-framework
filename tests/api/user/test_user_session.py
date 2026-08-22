@@ -19,7 +19,7 @@ def test_login_with_wrong_password_still_succeeds(user_api: UserApi, created_use
     response = user_api.login(created_user.username, "definitely-wrong-password")
 
     # Расхождение с контрактом: swagger.json объявляет 400 "Invalid username/password supplied",
-    # но сервер выдаёт сессию на любой пароль — аутентификации фактически нет.
+    # но сервер выдаёт сессию на любой пароль - аутентификации фактически нет.
     assert response.status_code == 200
     assert "logged in user session" in ApiResponse.model_validate(response.json()).message
 
