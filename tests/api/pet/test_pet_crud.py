@@ -7,8 +7,13 @@ from models import Pet, PetStatus
 
 @pytest.mark.smoke
 @pytest.mark.positive
-def test_create_pet(pet_api: PetApi, pet_factory: type[PetFactory]) -> None:
+def test_create_pet(
+    pet_api: PetApi,
+    pet_factory: type[PetFactory],
+    pet_cleanup: list[int],
+) -> None:
     pet = pet_factory.build()
+    pet_cleanup.append(pet.id)
 
     response = pet_api.create_pet(pet)
 

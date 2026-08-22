@@ -16,3 +16,12 @@ def created_pet(pet_api: PetApi, pet_factory: type[PetFactory]) -> Iterator[Pet]
     yield pet
 
     pet_api.delete_pet(pet.id)
+
+
+@pytest.fixture
+def pet_cleanup(pet_api: PetApi) -> Iterator[list[int]]:
+    ids: list[int] = []
+    yield ids
+
+    for pet_id in ids:
+        pet_api.delete_pet(pet_id)
