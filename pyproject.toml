@@ -11,11 +11,12 @@ dependencies = [
     "pytest>=8.2",
     "faker>=25.0",
     "jsonschema>=4.0",
+    "allure-pytest>=2.13",
 ]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "--strict-markers"
+addopts = "--strict-markers --alluredir=allure-results --clean-alluredir"
 log_level = "INFO"
 log_format = "%(levelname)-5s %(name)s %(message)s"
 markers = [

@@ -1,3 +1,6 @@
+import json
+
+import allure
 import httpx
 
 from config import settings
@@ -29,12 +32,13 @@ class BaseApiClient:
         self._client = httpx.Client(base_url=base_url, headers=headers, timeout=timeout)
 
     def _request(self, method: str, url: str, **kwargs) -> httpx.Response:
-        logger.info(
-            "%s %s params=%s payload=%s",
-            method,
-            url,
-            mask_secrets(kwargs.get("params") or {}),
-            mask_secrets(kwargs.get("json") or {}),
+        params = mask_secrets(kwargs.get("params") or {})
+        payload = mask_secrets(kwargs.get("json") or {})
+        logger.info("%s %s params=%s payload=%s", method, url, params, payload)
+        allure.attach(
+            json.dumps({"params": params, "payload": payload}, indent=2, ensure_ascii=False),
+            name=f"request {method} {url}",
+            attachment_type=allure.attachment_type.JSON,
         )
 
         for attempt in range(1, self._retry_count + 2):
@@ -59,6 +63,11 @@ class BaseApiClient:
                 url,
                 response.status_code,
                 response.elapsed.total_seconds(),
+            )
+            allure.attach(
+                response.text,
+                name=f"response {response.status_code} {method} {url}",
+                attachment_type=allure.attachment_type.TEXT,
             )
             return response
 
