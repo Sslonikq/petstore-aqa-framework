@@ -1,0 +1,2 @@
+INFO  petstore GET /store/inventory params={} payload={}
+INFO  petstore GET /store/inventory -> 200 (0.01s)
