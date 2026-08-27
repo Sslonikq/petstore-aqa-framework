@@ -1,0 +1,1 @@
+[{"values":["https://petstore.swagger.io/v2"],"name":"BASE_URL"},{"values":["10.0"],"name":"TIMEOUT"},{"values":["2"],"name":"RETRY_COUNT"},{"values":["False"],"name":"API_KEY_SET"}]

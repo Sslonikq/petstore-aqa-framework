@@ -1,0 +1,1 @@
+{"id":961808161,"username":"chrismann","firstName":"Michelle","lastName":"Garcia","email":"egarcia@example.net","password":"T8d+(2Yh!l","phone":"3333288729","userStatus":1}
