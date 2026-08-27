@@ -1,0 +1,72 @@
+name: CI
+
+on:
+    push:
+        branches:
+            ["main"]
+    pull_request:
+        branches:
+            ["main"]
+    workflow_dispatch:
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        concurrency: ${{ github.workflow }}-${{ github.ref }}
+        permissions: 
+            contents: write
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with: 
+                  python-version: "3.11"
+                  cache: "pip"
+                  cache-dependency-path: "pyproject.toml"
+
+            - name: Install dependencies
+              run: pip install -e .
+
+            - name: Run tests
+              run: pytest
+              env: 
+                  BASE_URL: "https://petstore.swagger.io/v2"
+
+            - name: Upload allure-results
+              if: always()
+              uses: actions/upload-artifact@v4
+              with:
+                  path: allure-results/
+                  retention-days: 7
+
+            - name: Checkout gh-pages for history
+              if: always()
+              uses: actions/checkout@v4
+              continue-on-error: true
+              with:
+                  ref: gh-pages
+                  path: gh-pages
+
+            - name: Copy history
+              if: always()
+              run: |
+                  mkdir -p allure-results/history
+                  cp -r gh-pages/history/. allure-results/history/ 2>/dev/null || true
+
+            - name: Install Allure CLI
+              if: always()
+              run: npm install -g allure-commandline
+
+            - name: Generate Allure report
+              if: always()
+              run: allure generate allure-results -o allure-report --clean
+
+            - name: Deploy to GitHub Pages
+              if: always() && github.ref == 'refs/heads/main'
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                publish_branch: gh-pages
+                publish_dir: allure-report
