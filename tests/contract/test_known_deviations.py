@@ -1,9 +1,13 @@
+import allure
 import pytest
 
 from api import BaseApiClient, PetApi, StoreApi, UserApi
 from models import Order, User
 
+pytestmark = [allure.epic("Контракт"), allure.feature("Расхождения с документацией")]
 
+
+@allure.title("Поиск по статусу вне enum должен отвечать 400")
 @pytest.mark.contract
 @pytest.mark.xfail(
     strict=True,
@@ -16,6 +20,7 @@ def test_find_by_status_rejects_invalid_value(pet_api: PetApi) -> None:
     assert response.status_code == 400
 
 
+@allure.title("Поиск без обязательного status должен отвечать 400")
 @pytest.mark.contract
 @pytest.mark.xfail(
     strict=True,
@@ -28,6 +33,7 @@ def test_find_by_status_requires_status_param(api_client: BaseApiClient) -> None
     assert response.status_code == 400
 
 
+@allure.title("Заказ с id больше maximum должен отвечать 400")
 @pytest.mark.contract
 @pytest.mark.xfail(
     strict=True,
@@ -40,6 +46,7 @@ def test_get_order_rejects_id_above_maximum(store_api: StoreApi, created_order: 
     assert response.status_code == 400
 
 
+@allure.title("Удаление заказа должно отвечать документированным кодом")
 @pytest.mark.contract
 @pytest.mark.xfail(
     strict=True,
@@ -52,6 +59,7 @@ def test_delete_order_response_is_documented(store_api: StoreApi, created_order:
     assert response.status_code in (400, 404)
 
 
+@allure.title("Вход с неверным паролем должен отвечать 400")
 @pytest.mark.contract
 @pytest.mark.xfail(
     strict=True,

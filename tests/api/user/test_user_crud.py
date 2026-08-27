@@ -1,10 +1,14 @@
+import allure
 import pytest
 
 from api import UserApi
 from factories import UserFactory
 from models import ApiResponse, User
 
+pytestmark = [allure.epic("User"), allure.feature("CRUD")]
 
+
+@allure.title("Создание пользователя")
 @pytest.mark.smoke
 @pytest.mark.positive
 def test_create_user(
@@ -22,6 +26,7 @@ def test_create_user(
     assert created.code == 200
 
 
+@allure.title("Чтение созданного пользователя")
 @pytest.mark.positive
 def test_get_user(user_api: UserApi, created_user: User) -> None:
     response = user_api.get_user(created_user.username)
@@ -37,6 +42,7 @@ def test_get_user(user_api: UserApi, created_user: User) -> None:
     assert received.phone == created_user.phone
 
 
+@allure.title("Обновление пользователя")
 @pytest.mark.positive
 def test_update_user(user_api: UserApi, created_user: User) -> None:
     new_first_name = "Updated"
@@ -56,6 +62,7 @@ def test_update_user(user_api: UserApi, created_user: User) -> None:
     assert stored.email == new_email
 
 
+@allure.title("Удаление пользователя")
 @pytest.mark.positive
 def test_delete_user(user_api: UserApi, created_user: User) -> None:
     response = user_api.delete_user(created_user.username)
@@ -64,6 +71,7 @@ def test_delete_user(user_api: UserApi, created_user: User) -> None:
     assert user_api.get_user(created_user.username).status_code == 404
 
 
+@allure.title("Чтение несуществующего пользователя возвращает 404")
 @pytest.mark.negative
 def test_get_user_returns_404_for_unknown_username(user_api: UserApi) -> None:
     response = user_api.get_user("no_such_user_zzz_999")

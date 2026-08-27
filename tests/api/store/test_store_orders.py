@@ -1,10 +1,14 @@
+import allure
 import pytest
 
 from api import StoreApi
 from factories import OrderFactory
 from models import Order, PetStatus
 
+pytestmark = [allure.epic("Store"), allure.feature("Заказы")]
 
+
+@allure.title("Оформление заказа")
 @pytest.mark.smoke
 @pytest.mark.positive
 def test_place_order(
@@ -22,6 +26,7 @@ def test_place_order(
     assert stored == order
 
 
+@allure.title("Чтение созданного заказа")
 @pytest.mark.positive
 def test_get_order(store_api: StoreApi, created_order: Order) -> None:
     response = store_api.get_order(created_order.id)
@@ -31,6 +36,7 @@ def test_get_order(store_api: StoreApi, created_order: Order) -> None:
     assert received == created_order
 
 
+@allure.title("Удаление заказа")
 @pytest.mark.positive
 def test_delete_order(store_api: StoreApi, created_order: Order) -> None:
     response = store_api.delete_order(created_order.id)
@@ -42,6 +48,7 @@ def test_delete_order(store_api: StoreApi, created_order: Order) -> None:
     assert store_api.get_order(created_order.id).status_code == 404
 
 
+@allure.title("Чтение несуществующего заказа возвращает 404")
 @pytest.mark.negative
 def test_get_order_returns_404_for_unknown_id(store_api: StoreApi) -> None:
     response = store_api.get_order(99999999)
@@ -49,6 +56,7 @@ def test_get_order_returns_404_for_unknown_id(store_api: StoreApi) -> None:
     assert response.status_code == 404
 
 
+@allure.title("Сводка склада по статусам")
 @pytest.mark.positive
 def test_get_inventory(store_api: StoreApi) -> None:
     response = store_api.get_inventory()

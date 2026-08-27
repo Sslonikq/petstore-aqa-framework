@@ -1,11 +1,15 @@
 from enum import StrEnum
 
+import allure
 import pytest
 from pydantic.alias_generators import to_camel
 
 from models import Order, OrderStatus, Pet, PetStatus, PetstoreModel, User
 
+pytestmark = [allure.epic("Контракт"), allure.feature("Синхронизация моделей")]
 
+
+@allure.title("Поля модели {schema_name} совпадают со спекой")
 @pytest.mark.contract
 @pytest.mark.parametrize(
     "model, schema_name",
@@ -26,6 +30,7 @@ def test_model_fields_match_contract(
     )
 
 
+@allure.title("Обязательные поля модели {schema_name} совпадают со спекой")
 @pytest.mark.contract
 @pytest.mark.parametrize(
     "model, schema_name",
@@ -48,6 +53,7 @@ def test_model_required_fields_match_contract(
     )
 
 
+@allure.title("Значения enum в {schema_name} совпадают со спекой")
 @pytest.mark.contract
 @pytest.mark.parametrize("enum_class, schema_name", [(PetStatus, "Pet"), (OrderStatus, "Order")])
 def test_enum_values_match_contract(

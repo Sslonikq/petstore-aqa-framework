@@ -1,10 +1,14 @@
+import allure
 import pytest
 
 from api import PetApi
 from factories import PetFactory
 from models import Pet, PetStatus
 
+pytestmark = [allure.epic("Pet"), allure.feature("CRUD")]
 
+
+@allure.title("Создание питомца")
 @pytest.mark.smoke
 @pytest.mark.positive
 def test_create_pet(
@@ -23,6 +27,7 @@ def test_create_pet(
     assert created.name == pet.name
 
 
+@allure.title("Чтение созданного питомца")
 @pytest.mark.positive
 def test_get_pet(pet_api: PetApi, created_pet: Pet) -> None:
     response = pet_api.get_pet(created_pet.id)
@@ -33,6 +38,7 @@ def test_get_pet(pet_api: PetApi, created_pet: Pet) -> None:
     assert received.name == created_pet.name
 
 
+@allure.title("Чтение несуществующего питомца возвращает 404")
 @pytest.mark.negative
 def test_get_pet_returns_404_for_unknown_id(pet_api: PetApi) -> None:
     response = pet_api.get_pet(99999999)
@@ -40,6 +46,7 @@ def test_get_pet_returns_404_for_unknown_id(pet_api: PetApi) -> None:
     assert response.status_code == 404
 
 
+@allure.title("Обновление питомца сохраняется на сервере")
 @pytest.mark.positive
 def test_update_pet(pet_api: PetApi, created_pet: Pet) -> None:
     new_name = "Updated name"
@@ -60,6 +67,7 @@ def test_update_pet(pet_api: PetApi, created_pet: Pet) -> None:
     assert stored.status == new_status
 
 
+@allure.title("Удаление питомца")
 @pytest.mark.positive
 def test_delete_pet(pet_api: PetApi, created_pet: Pet) -> None:
     response = pet_api.delete_pet(created_pet.id)

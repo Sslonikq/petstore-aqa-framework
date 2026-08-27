@@ -1,9 +1,13 @@
+import allure
 import pytest
 
 from api import PetApi
 from factories import PetFactory
 
+pytestmark = [allure.epic("Pet"), allure.feature("Валидация")]
 
+
+@allure.title("Питомец с пустым именем принимается сервером")
 @pytest.mark.negative
 def test_create_pet_accepts_empty_name(
     pet_api: PetApi,
@@ -22,6 +26,7 @@ def test_create_pet_accepts_empty_name(
     assert stored.json()["name"] == ""
 
 
+@allure.title("Питомец с очень длинным именем принимается сервером")
 @pytest.mark.negative
 def test_create_pet_accepts_very_long_name(
     pet_api: PetApi,
