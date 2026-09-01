@@ -44,6 +44,7 @@ config/            типизированные настройки из .env —
 api/
   base_client.py    BaseApiClient — транспорт: httpx, auth, заголовки, таймаут, ретраи, логирование
   async_client.py   асинхронный транспорт, используется только там, где нужна конкурентность
+  async_pet_api.py  асинхронный API-объект; зеркалит не весь PetApi, а только операции, которым нужен gather
   pet_api.py / store_api.py / user_api.py   знание эндпоинтов по ресурсу
 models/            Pydantic-модели запроса/ответа (Pet, User, Order, Category, Tag)
 factories/         билдеры данных на Faker (PetFactory, UserFactory, OrderFactory)
@@ -67,7 +68,7 @@ pytest
 pytest -m smoke
 pytest -m regression
 pytest -m contract
-pytest -m async
+pytest -m concurrent
 ```
 
 Команды для Docker/Allure/линта/CI документируются в `README.md` по мере реализации.
@@ -85,7 +86,7 @@ RETRY_COUNT=2
 
 - `config` ничего внутреннего не импортирует — остаётся листом графа зависимостей, чтобы не было циклов.
 - Секреты/креды — только в файлах из `.gitignore`, никогда в коде или коммитах.
-- Маркеры используются осмысленно: `smoke, regression, positive, negative, contract, async, slow` — не добавлять маркер без причины.
+- Маркеры используются осмысленно: `smoke, regression, positive, negative, contract, concurrent, slow` — не добавлять маркер без причины. `async` как имя маркера невозможно: это зарезервированное слово Python, `@pytest.mark.async` не разбирается.
 - Форматтер/линтер/тайпчекер (ruff/mypy) добавляются только тогда, когда у них есть конкретная роль, а не для галочки.
 
 ## Процесс добавления фичи

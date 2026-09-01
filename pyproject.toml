@@ -12,11 +12,14 @@ dependencies = [
     "faker>=25.0",
     "jsonschema>=4.0",
     "allure-pytest>=2.13",
+    "pytest-asyncio>=0.23",
 ]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "--strict-markers --alluredir=allure-results --clean-alluredir"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
 log_level = "INFO"
 log_format = "%(levelname)-5s %(name)s %(message)s"
 markers = [
@@ -25,7 +28,7 @@ markers = [
     "positive: happy-path behavior",
     "negative: invalid input / error handling",
     "contract: OpenAPI contract compatibility",
-    "async: exercises the async transport",
+    "concurrent: sends requests in parallel over the async transport",
     "slow: long-running tests",
 ]
 
