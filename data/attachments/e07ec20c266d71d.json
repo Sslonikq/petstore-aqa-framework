@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 379143339,
+    "name": "Lisa Hayes",
+    "photoUrls": [
+      "https://dummyimage.com/540x752"
+    ],
+    "status": "available"
+  }
+}

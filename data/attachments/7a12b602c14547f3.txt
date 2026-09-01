@@ -1,0 +1,8 @@
+INFO  petstore POST /pet params={} payload={'id': 243098929, 'name': 'Craig Patterson', 'photoUrls': ['https://picsum.photos/1011/987'], 'status': 'available'}
+INFO  petstore POST /pet -> 200 (0.05s)
+INFO  petstore PUT /pet params={} payload={'id': 243098929, 'name': 'Updated name', 'photoUrls': ['https://picsum.photos/1011/987'], 'status': 'sold'}
+INFO  petstore PUT /pet -> 200 (0.05s)
+INFO  petstore GET /pet/243098929 params={} payload={}
+INFO  petstore GET /pet/243098929 -> 200 (0.05s)
+INFO  petstore DELETE /pet/243098929 params={} payload={}
+INFO  petstore DELETE /pet/243098929 -> 200 (0.05s)

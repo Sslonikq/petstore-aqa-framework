@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 678885055,
+    "name": "Susan Wells",
+    "photoUrls": [
+      "https://picsum.photos/505/288"
+    ],
+    "status": "available"
+  }
+}

@@ -1,1 +1,0 @@
-{"id":963962978,"username":"andersonmichael","firstName":"Darren","lastName":"Bowman","email":"william50@example.net","password":"U6q7GAv_q$","phone":"+1-754-296-1408x44598","userStatus":1}
