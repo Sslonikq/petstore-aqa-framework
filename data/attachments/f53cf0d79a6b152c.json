@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 627620019,
+    "name": "Johnny Thompson",
+    "photoUrls": [
+      "https://dummyimage.com/50x408"
+    ],
+    "status": "available"
+  }
+}

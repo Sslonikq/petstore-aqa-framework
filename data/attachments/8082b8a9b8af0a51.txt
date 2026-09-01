@@ -1,0 +1,2 @@
+INFO  petstore GET /pet/findByStatus params={'status': <PetStatus.AVAILABLE: 'available'>} payload={}
+INFO  petstore GET /pet/findByStatus -> 200 (0.21s)

@@ -1,1 +1,0 @@
-{"id":341458423,"username":"qfigueroa","firstName":"Ricardo","lastName":"Ferguson","email":"debra88@example.com","password":"W!9VbyGNt&","phone":"9669718042","userStatus":1}

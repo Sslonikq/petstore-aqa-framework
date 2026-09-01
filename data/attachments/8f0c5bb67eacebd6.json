@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 343889754,
+    "name": "Paul Stephens",
+    "photoUrls": [
+      "https://picsum.photos/34/676"
+    ],
+    "status": "available"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 999205868,
+    "name": "Matthew Armstrong",
+    "photoUrls": [
+      "https://placekittens.com/628/124"
+    ],
+    "status": "available"
+  }
+}
