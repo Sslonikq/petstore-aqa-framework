@@ -1,0 +1,7 @@
+services:
+  tests:
+    build: .
+    environment:
+      BASE_URL: https://petstore.swagger.io/v2
+    volumes:
+      - ./allure-results:/app/allure-results
