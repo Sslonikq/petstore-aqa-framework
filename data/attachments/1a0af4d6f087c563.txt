@@ -1,0 +1,4 @@
+INFO  petstore POST /user params={} payload={'id': 341995372, 'username': 'smithrenee', 'firstName': 'Jason', 'lastName': 'Booth', 'email': 'stacey55@example.com', 'password': 'M!18VRKi6p', 'phone': '+1-416-705-6399x74181', 'userStatus': 1}
+INFO  petstore POST /user -> 200 (0.07s)
+INFO  petstore DELETE /user/smithrenee params={} payload={}
+INFO  petstore DELETE /user/smithrenee -> 200 (0.07s)

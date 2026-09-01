@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 226069828,
+    "name": "Michael Smith",
+    "photoUrls": [
+      "https://placekittens.com/458/753"
+    ],
+    "status": "available"
+  }
+}

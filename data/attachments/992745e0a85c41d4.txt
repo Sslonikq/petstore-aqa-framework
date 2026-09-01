@@ -1,0 +1,2 @@
+INFO  petstore GET /swagger.json params={} payload={}
+INFO  petstore GET /swagger.json -> 200 (0.07s)

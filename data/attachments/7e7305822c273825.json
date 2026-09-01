@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 758831784,
+    "name": "Updated name",
+    "photoUrls": [
+      "https://placekittens.com/593/116"
+    ],
+    "status": "sold"
+  }
+}
