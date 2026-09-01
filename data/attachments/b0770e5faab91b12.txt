@@ -1,1 +1,0 @@
-{"id":920390232,"name":"Mary Robertson","photoUrls":["https://placekittens.com/818/531"],"tags":[],"status":"available"}

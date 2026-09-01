@@ -1,0 +1,6 @@
+INFO  petstore POST /pet params={} payload={'id': 456178374, 'name': 'Michael Meyer', 'photoUrls': ['https://picsum.photos/796/138'], 'status': 'available'}
+INFO  petstore POST /pet -> 200 (0.06s)
+INFO  petstore GET /pet/456178374 params={} payload={}
+INFO  petstore GET /pet/456178374 -> 200 (0.06s)
+INFO  petstore DELETE /pet/456178374 params={} payload={}
+INFO  petstore DELETE /pet/456178374 -> 200 (0.06s)

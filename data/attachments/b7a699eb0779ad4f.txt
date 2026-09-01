@@ -1,0 +1,24 @@
+INFO  petstore POST /pet params={} payload={'id': 766002450, 'name': 'Karen Nelson', 'photoUrls': ['https://picsum.photos/62/755'], 'status': 'available'}
+INFO  petstore POST /pet -> 200 (0.06s)
+INFO  petstore GET /pet/766002450 params={} payload={}
+INFO  petstore GET /pet/766002450 params={} payload={}
+INFO  petstore GET /pet/766002450 params={} payload={}
+INFO  petstore GET /pet/766002450 params={} payload={}
+INFO  petstore GET /pet/766002450 params={} payload={}
+INFO  petstore GET /pet/766002450 params={} payload={}
+INFO  petstore GET /pet/766002450 params={} payload={}
+INFO  petstore GET /pet/766002450 params={} payload={}
+INFO  petstore GET /pet/766002450 params={} payload={}
+INFO  petstore GET /pet/766002450 params={} payload={}
+INFO  petstore GET /pet/766002450 -> 200 (0.24s)
+INFO  petstore GET /pet/766002450 -> 200 (0.24s)
+INFO  petstore GET /pet/766002450 -> 200 (0.25s)
+INFO  petstore GET /pet/766002450 -> 200 (0.24s)
+INFO  petstore GET /pet/766002450 -> 200 (0.25s)
+INFO  petstore GET /pet/766002450 -> 200 (0.25s)
+INFO  petstore GET /pet/766002450 -> 200 (0.25s)
+INFO  petstore GET /pet/766002450 -> 200 (0.25s)
+INFO  petstore GET /pet/766002450 -> 200 (0.26s)
+INFO  petstore GET /pet/766002450 -> 200 (0.26s)
+INFO  petstore DELETE /pet/766002450 params={} payload={}
+INFO  petstore DELETE /pet/766002450 -> 200 (0.06s)

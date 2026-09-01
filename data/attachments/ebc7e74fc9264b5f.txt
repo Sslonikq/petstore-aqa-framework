@@ -1,0 +1,6 @@
+INFO  petstore POST /store/order params={} payload={'id': 945921021, 'petId': 707309760, 'quantity': 5, 'shipDate': '2026-09-08T14:09:25Z', 'status': 'placed', 'complete': False}
+INFO  petstore POST /store/order -> 200 (0.06s)
+INFO  petstore GET /store/order/945921021 params={} payload={}
+INFO  petstore GET /store/order/945921021 -> 200 (0.06s)
+INFO  petstore DELETE /store/order/945921021 params={} payload={}
+INFO  petstore DELETE /store/order/945921021 -> 200 (0.06s)

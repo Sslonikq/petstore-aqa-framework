@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 871536455,
+    "name": "Kim Dunlap",
+    "photoUrls": [
+      "https://picsum.photos/168/514"
+    ],
+    "status": "available"
+  }
+}

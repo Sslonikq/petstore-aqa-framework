@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 416447601,
+    "name": "Warren Smith",
+    "photoUrls": [
+      "https://placekittens.com/429/270"
+    ],
+    "status": "available"
+  }
+}

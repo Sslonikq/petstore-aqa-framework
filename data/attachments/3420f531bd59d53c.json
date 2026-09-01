@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 428110049,
+    "name": "John Barton",
+    "photoUrls": [
+      "https://picsum.photos/177/902"
+    ],
+    "status": "available"
+  }
+}

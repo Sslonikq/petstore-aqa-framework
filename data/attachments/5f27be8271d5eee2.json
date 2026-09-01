@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 552572639,
+    "name": "Christopher Jones",
+    "photoUrls": [
+      "https://dummyimage.com/916x335"
+    ],
+    "status": "available"
+  }
+}

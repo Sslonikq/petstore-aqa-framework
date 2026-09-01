@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 89929847,
+    "name": "Christopher Coleman",
+    "photoUrls": [
+      "https://picsum.photos/727/1014"
+    ],
+    "status": "available"
+  }
+}
