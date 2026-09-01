@@ -12,6 +12,7 @@ pytestmark = [
     allure.feature("Конкурентность"),
     pytest.mark.concurrent,
     pytest.mark.positive,
+    pytest.mark.slow,
 ]
 
 CONCURRENT_REQUESTS = 10

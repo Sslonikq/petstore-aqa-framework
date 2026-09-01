@@ -66,8 +66,8 @@ Dockerfile / docker-compose.yml   воспроизводимый запуск т
 ```bash
 pytest
 pytest -m smoke
-pytest -m regression
 pytest -m contract
+pytest -m "not slow"
 pytest -m concurrent
 ```
 
@@ -86,7 +86,7 @@ RETRY_COUNT=2
 
 - `config` ничего внутреннего не импортирует — остаётся листом графа зависимостей, чтобы не было циклов.
 - Секреты/креды — только в файлах из `.gitignore`, никогда в коде или коммитах.
-- Маркеры используются осмысленно: `smoke, regression, positive, negative, contract, concurrent, slow` — не добавлять маркер без причины. `async` как имя маркера невозможно: это зарезервированное слово Python, `@pytest.mark.async` не разбирается.
+- Маркеры используются осмысленно: `smoke, positive, negative, contract, concurrent, slow` — не добавлять маркер без причины; маркер, не проставленный ни одному тесту, удаляется. `async` как имя маркера невозможно: это зарезервированное слово Python, `@pytest.mark.async` не разбирается.
 - Форматтер/линтер/тайпчекер (ruff/mypy) добавляются только тогда, когда у них есть конкретная роль, а не для галочки.
 
 ## Процесс добавления фичи
