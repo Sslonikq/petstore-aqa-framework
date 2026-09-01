@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 602780243,
+    "name": "Daniel Salazar",
+    "photoUrls": [
+      "https://picsum.photos/287/811"
+    ],
+    "status": "available"
+  }
+}

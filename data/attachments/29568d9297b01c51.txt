@@ -1,0 +1,14 @@
+INFO  petstore POST /pet params={} payload={'id': 861028223, 'name': 'Mark Bennett', 'photoUrls': ['https://placekittens.com/1004/451'], 'status': 'available'}
+INFO  petstore POST /pet -> 200 (0.01s)
+INFO  petstore GET /pet/861028223 params={} payload={}
+INFO  petstore GET /pet/861028223 -> 200 (0.01s)
+INFO  petstore PUT /pet params={} payload={'id': 861028223, 'name': 'Updated name', 'photoUrls': ['https://placekittens.com/1004/451'], 'status': 'sold'}
+INFO  petstore PUT /pet -> 200 (0.01s)
+INFO  petstore GET /pet/861028223 params={} payload={}
+INFO  petstore GET /pet/861028223 -> 200 (0.01s)
+INFO  petstore DELETE /pet/861028223 params={} payload={}
+INFO  petstore DELETE /pet/861028223 -> 200 (0.00s)
+INFO  petstore GET /pet/861028223 params={} payload={}
+INFO  petstore GET /pet/861028223 -> 404 (0.01s)
+INFO  petstore DELETE /pet/861028223 params={} payload={}
+INFO  petstore DELETE /pet/861028223 -> 404 (0.00s)

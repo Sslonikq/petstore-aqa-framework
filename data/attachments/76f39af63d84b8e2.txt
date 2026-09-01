@@ -1,1 +1,0 @@
-{"id":379196938,"name":"Mrs. Angela Miller","photoUrls":["https://placekittens.com/201/761"],"tags":[],"status":"available"}

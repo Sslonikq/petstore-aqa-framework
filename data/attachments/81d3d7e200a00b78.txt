@@ -1,2 +1,0 @@
-INFO  petstore GET /user/logout params={} payload={}
-INFO  petstore GET /user/logout -> 200 (0.05s)

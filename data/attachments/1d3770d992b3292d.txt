@@ -1,0 +1,1 @@
+{"id":642335363,"username":"perkinsgabriela","firstName":"Victoria","lastName":"Mitchell","email":"williamsangela@example.net","password":"(9PK*3Vg0x","phone":"+1-628-930-1108x64676","userStatus":1}

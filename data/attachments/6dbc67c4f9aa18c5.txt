@@ -1,0 +1,24 @@
+INFO  petstore POST /pet params={} payload={'id': 673395437, 'name': 'Daniel Williams', 'photoUrls': ['https://dummyimage.com/834x295'], 'status': 'available'}
+INFO  petstore POST /pet -> 200 (0.01s)
+INFO  petstore GET /pet/673395437 params={} payload={}
+INFO  petstore GET /pet/673395437 params={} payload={}
+INFO  petstore GET /pet/673395437 params={} payload={}
+INFO  petstore GET /pet/673395437 params={} payload={}
+INFO  petstore GET /pet/673395437 params={} payload={}
+INFO  petstore GET /pet/673395437 params={} payload={}
+INFO  petstore GET /pet/673395437 params={} payload={}
+INFO  petstore GET /pet/673395437 params={} payload={}
+INFO  petstore GET /pet/673395437 params={} payload={}
+INFO  petstore GET /pet/673395437 params={} payload={}
+INFO  petstore GET /pet/673395437 -> 200 (0.04s)
+INFO  petstore GET /pet/673395437 -> 200 (0.04s)
+INFO  petstore GET /pet/673395437 -> 200 (0.03s)
+INFO  petstore GET /pet/673395437 -> 200 (0.04s)
+INFO  petstore GET /pet/673395437 -> 200 (0.04s)
+INFO  petstore GET /pet/673395437 -> 200 (0.04s)
+INFO  petstore GET /pet/673395437 -> 200 (0.04s)
+INFO  petstore GET /pet/673395437 -> 200 (0.04s)
+INFO  petstore GET /pet/673395437 -> 200 (0.06s)
+INFO  petstore GET /pet/673395437 -> 200 (0.06s)
+INFO  petstore DELETE /pet/673395437 params={} payload={}
+INFO  petstore DELETE /pet/673395437 -> 200 (0.01s)

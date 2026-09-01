@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 945501921,
+    "name": "Kenneth Simpson",
+    "photoUrls": [
+      "https://picsum.photos/381/97"
+    ],
+    "status": "available"
+  }
+}
