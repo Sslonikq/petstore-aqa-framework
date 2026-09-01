@@ -1,9 +1,9 @@
-from collections.abc import Iterator
+from collections.abc import AsyncIterator, Iterator
 from pathlib import Path
 
 import pytest
 
-from api import BaseApiClient, PetApi, StoreApi, UserApi
+from api import AsyncApiClient, AsyncPetApi, BaseApiClient, PetApi, StoreApi, UserApi
 from config import settings
 from factories import OrderFactory, PetFactory, UserFactory
 
@@ -32,9 +32,21 @@ def api_client() -> Iterator[BaseApiClient]:
     client.close()
 
 
+@pytest.fixture
+async def async_client() -> AsyncIterator[AsyncApiClient]:
+    client = AsyncApiClient()
+    yield client
+    await client.aclose()
+
+
 @pytest.fixture(scope="session")
 def pet_api(api_client: BaseApiClient) -> PetApi:
     return PetApi(api_client)
+
+
+@pytest.fixture
+def async_pet_api(async_client: AsyncApiClient) -> AsyncPetApi:
+    return AsyncPetApi(async_client)
 
 
 @pytest.fixture(scope="session")
@@ -60,3 +72,5 @@ def order_factory() -> type[OrderFactory]:
 @pytest.fixture
 def user_factory() -> type[UserFactory]:
     return UserFactory
+
+
