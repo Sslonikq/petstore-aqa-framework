@@ -1,1 +1,0 @@
-{"sold":387,"INVALID_STATUS":1,"New":1,"to sell":1,"placed":1,"d":1,"string":4,"unavailable":1,"Busy":1,"pending":79,"available":492,"Not Available":1,"availabl":1,"notAvailable":1,"exist":1,"SOLD":1,"available, sold":1,"avaliable":1,"invalid":1,"htTp://whsec.us/rfi.php":1,"Available":3,"vente":1}

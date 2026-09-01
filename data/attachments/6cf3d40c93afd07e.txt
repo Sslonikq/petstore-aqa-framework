@@ -1,1 +1,0 @@
-{"id":26604279,"username":"oconnordana","firstName":"Gwendolyn","lastName":"Peters","email":"hendersonsabrina@example.net","password":"yx8@@8DqMA","phone":"384.934.7321x484","userStatus":1}
