@@ -1,0 +1,18 @@
+INFO  petstore POST /user params={} payload={'id': 296447366, 'username': 'johnnicholson', 'firstName': 'Jennifer', 'lastName': 'Moss', 'email': 'christopher04@example.net', 'password': '$Q!5Uoj@ud', 'phone': '(205)605-4170x1030', 'userStatus': 1}
+INFO  petstore POST /user -> 200 (0.05s)
+INFO  petstore GET /user/login params={'username': 'johnnicholson', 'password': '$Q!5Uoj@ud'} payload={}
+INFO  petstore GET /user/login -> 200 (0.05s)
+INFO  petstore GET /user/johnnicholson params={} payload={}
+INFO  petstore GET /user/johnnicholson -> 200 (0.05s)
+INFO  petstore PUT /user/johnnicholson params={} payload={'id': 296447366, 'username': 'johnnicholson', 'firstName': 'Updated', 'lastName': 'Moss', 'email': 'updated@example.com', 'password': '$Q!5Uoj@ud', 'phone': '(205)605-4170x1030', 'userStatus': 1}
+INFO  petstore PUT /user/johnnicholson -> 200 (0.05s)
+INFO  petstore GET /user/johnnicholson params={} payload={}
+INFO  petstore GET /user/johnnicholson -> 200 (0.05s)
+INFO  petstore GET /user/logout params={} payload={}
+INFO  petstore GET /user/logout -> 200 (0.05s)
+INFO  petstore DELETE /user/johnnicholson params={} payload={}
+INFO  petstore DELETE /user/johnnicholson -> 200 (0.05s)
+INFO  petstore GET /user/johnnicholson params={} payload={}
+INFO  petstore GET /user/johnnicholson -> 404 (0.05s)
+INFO  petstore DELETE /user/johnnicholson params={} payload={}
+INFO  petstore DELETE /user/johnnicholson -> 404 (0.05s)

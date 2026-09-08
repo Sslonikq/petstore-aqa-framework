@@ -1,2 +1,0 @@
-INFO  petstore GET /pet/findByStatus params={} payload={}
-INFO  petstore GET /pet/findByStatus -> 200 (0.01s)
