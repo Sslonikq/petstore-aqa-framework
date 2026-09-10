@@ -1,8 +1,8 @@
 import allure
 import pytest
 
-from api import StoreApi
-from factories import OrderFactory
+from api import PetApi, StoreApi
+from factories import OrderFactory, PetFactory
 from models import Order, PetStatus
 
 pytestmark = [allure.epic("Store"), allure.feature("Заказы")]
@@ -56,13 +56,22 @@ def test_get_order_returns_404_for_unknown_id(store_api: StoreApi) -> None:
     assert response.status_code == 404
 
 
-@allure.title("Сводка склада по статусам")
+@allure.title("Сводка склада учитывает созданного питомца")
 @pytest.mark.positive
-def test_get_inventory(store_api: StoreApi) -> None:
+def test_get_inventory(
+    store_api: StoreApi,
+    pet_api: PetApi,
+    pet_factory: type[PetFactory],
+    pet_cleanup: list[int],
+) -> None:
+    pet = pet_factory.build(status=PetStatus.PENDING)
+    pet_cleanup.append(pet.id)
+    assert pet_api.create_pet(pet).status_code == 200
+
     response = store_api.get_inventory()
     assert response.status_code == 200
 
     inventory = response.json()
     assert isinstance(inventory, dict)
-    assert all(status in inventory for status in PetStatus)
     assert all(isinstance(count, int) for count in inventory.values())
+    assert inventory.get(PetStatus.PENDING, 0) >= 1
