@@ -1,0 +1,14 @@
+INFO  petstore POST /pet params={} payload={'id': 339985693, 'name': 'Stacy Stewart', 'photoUrls': ['https://placekittens.com/912/671'], 'status': 'available'}
+INFO  petstore POST /pet -> 200 (0.03s)
+INFO  petstore GET /pet/339985693 params={} payload={}
+INFO  petstore GET /pet/339985693 -> 200 (0.03s)
+INFO  petstore PUT /pet params={} payload={'id': 339985693, 'name': 'Updated name', 'photoUrls': ['https://placekittens.com/912/671'], 'status': 'sold'}
+INFO  petstore PUT /pet -> 200 (0.03s)
+INFO  petstore GET /pet/339985693 params={} payload={}
+INFO  petstore GET /pet/339985693 -> 200 (0.03s)
+INFO  petstore DELETE /pet/339985693 params={} payload={}
+INFO  petstore DELETE /pet/339985693 -> 200 (0.03s)
+INFO  petstore GET /pet/339985693 params={} payload={}
+INFO  petstore GET /pet/339985693 -> 404 (0.03s)
+INFO  petstore DELETE /pet/339985693 params={} payload={}
+INFO  petstore DELETE /pet/339985693 -> 404 (0.03s)

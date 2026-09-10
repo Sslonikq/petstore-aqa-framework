@@ -1,1 +1,0 @@
-{"id":942718701,"name":"April Holt","photoUrls":["https://placekittens.com/609/87"],"tags":[],"status":"available"}

@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 559245490,
+    "name": "Jason Jackson",
+    "photoUrls": [
+      "https://placekittens.com/344/542"
+    ],
+    "status": "available"
+  }
+}
