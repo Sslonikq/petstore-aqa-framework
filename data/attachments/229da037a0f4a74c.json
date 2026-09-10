@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 203524800,
+    "name": "Jon Miller",
+    "photoUrls": [
+      "https://placekittens.com/491/184"
+    ],
+    "status": "available"
+  }
+}

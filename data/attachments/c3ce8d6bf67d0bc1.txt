@@ -1,0 +1,60 @@
+INFO  petstore POST /pet params={} payload={'id': 848014427, 'name': 'Jennifer Ibarra', 'photoUrls': ['https://placekittens.com/209/44'], 'status': 'available'}
+INFO  petstore POST /pet params={} payload={'id': 543954590, 'name': 'Jennifer Elliott', 'photoUrls': ['https://placekittens.com/314/294'], 'status': 'available'}
+INFO  petstore POST /pet params={} payload={'id': 640220029, 'name': 'Eric Delgado', 'photoUrls': ['https://placekittens.com/40/921'], 'status': 'available'}
+INFO  petstore POST /pet params={} payload={'id': 10969843, 'name': 'Amy Mills', 'photoUrls': ['https://placekittens.com/201/220'], 'status': 'available'}
+INFO  petstore POST /pet params={} payload={'id': 806727207, 'name': 'Kristi Hernandez', 'photoUrls': ['https://picsum.photos/213/640'], 'status': 'available'}
+INFO  petstore POST /pet params={} payload={'id': 865787778, 'name': 'Anthony Whitehead', 'photoUrls': ['https://placekittens.com/678/625'], 'status': 'available'}
+INFO  petstore POST /pet params={} payload={'id': 203524800, 'name': 'Jon Miller', 'photoUrls': ['https://placekittens.com/491/184'], 'status': 'available'}
+INFO  petstore POST /pet params={} payload={'id': 312247217, 'name': 'Sharon Kennedy', 'photoUrls': ['https://dummyimage.com/232x382'], 'status': 'available'}
+INFO  petstore POST /pet params={} payload={'id': 541791607, 'name': 'Mark Tate', 'photoUrls': ['https://dummyimage.com/394x267'], 'status': 'available'}
+INFO  petstore POST /pet params={} payload={'id': 375363916, 'name': 'Alexander Hartman', 'photoUrls': ['https://picsum.photos/711/83'], 'status': 'available'}
+INFO  petstore POST /pet -> 200 (0.55s)
+INFO  petstore POST /pet -> 200 (0.55s)
+INFO  petstore POST /pet -> 200 (0.56s)
+INFO  petstore POST /pet -> 200 (0.57s)
+INFO  petstore POST /pet -> 200 (0.57s)
+INFO  petstore POST /pet -> 200 (0.58s)
+INFO  petstore POST /pet -> 200 (0.58s)
+INFO  petstore POST /pet -> 200 (0.58s)
+INFO  petstore POST /pet -> 200 (0.60s)
+INFO  petstore POST /pet -> 200 (0.61s)
+INFO  petstore GET /pet/848014427 params={} payload={}
+INFO  petstore GET /pet/543954590 params={} payload={}
+INFO  petstore GET /pet/640220029 params={} payload={}
+INFO  petstore GET /pet/10969843 params={} payload={}
+INFO  petstore GET /pet/806727207 params={} payload={}
+INFO  petstore GET /pet/865787778 params={} payload={}
+INFO  petstore GET /pet/203524800 params={} payload={}
+INFO  petstore GET /pet/312247217 params={} payload={}
+INFO  petstore GET /pet/541791607 params={} payload={}
+INFO  petstore GET /pet/375363916 params={} payload={}
+INFO  petstore GET /pet/806727207 -> 200 (0.03s)
+INFO  petstore GET /pet/543954590 -> 200 (0.03s)
+INFO  petstore GET /pet/848014427 -> 200 (0.04s)
+INFO  petstore GET /pet/375363916 -> 200 (0.03s)
+INFO  petstore GET /pet/203524800 -> 200 (0.04s)
+INFO  petstore GET /pet/312247217 -> 200 (0.04s)
+INFO  petstore GET /pet/10969843 -> 200 (0.04s)
+INFO  petstore GET /pet/865787778 -> 200 (0.04s)
+INFO  petstore GET /pet/541791607 -> 200 (0.04s)
+INFO  petstore GET /pet/640220029 -> 200 (0.04s)
+INFO  petstore DELETE /pet/848014427 params={} payload={}
+INFO  petstore DELETE /pet/848014427 -> 200 (0.14s)
+INFO  petstore DELETE /pet/543954590 params={} payload={}
+INFO  petstore DELETE /pet/543954590 -> 200 (0.02s)
+INFO  petstore DELETE /pet/640220029 params={} payload={}
+INFO  petstore DELETE /pet/640220029 -> 200 (0.02s)
+INFO  petstore DELETE /pet/10969843 params={} payload={}
+INFO  petstore DELETE /pet/10969843 -> 200 (0.02s)
+INFO  petstore DELETE /pet/806727207 params={} payload={}
+INFO  petstore DELETE /pet/806727207 -> 200 (0.02s)
+INFO  petstore DELETE /pet/865787778 params={} payload={}
+INFO  petstore DELETE /pet/865787778 -> 200 (0.02s)
+INFO  petstore DELETE /pet/203524800 params={} payload={}
+INFO  petstore DELETE /pet/203524800 -> 200 (0.02s)
+INFO  petstore DELETE /pet/312247217 params={} payload={}
+INFO  petstore DELETE /pet/312247217 -> 200 (0.02s)
+INFO  petstore DELETE /pet/541791607 params={} payload={}
+INFO  petstore DELETE /pet/541791607 -> 200 (0.02s)
+INFO  petstore DELETE /pet/375363916 params={} payload={}
+INFO  petstore DELETE /pet/375363916 -> 200 (0.02s)

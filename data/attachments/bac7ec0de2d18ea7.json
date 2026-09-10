@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 640220029,
+    "name": "Eric Delgado",
+    "photoUrls": [
+      "https://placekittens.com/40/921"
+    ],
+    "status": "available"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 364149107,
+    "name": "Updated name",
+    "photoUrls": [
+      "https://picsum.photos/807/495"
+    ],
+    "status": "sold"
+  }
+}
