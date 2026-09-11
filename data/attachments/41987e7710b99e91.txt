@@ -1,1 +1,0 @@
-{"id":503738394,"name":"Updated name","photoUrls":["https://picsum.photos/808/4"],"tags":[],"status":"sold"}

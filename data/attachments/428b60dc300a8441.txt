@@ -1,0 +1,2 @@
+INFO  petstore GET /user/no_such_user_zzz_999 params={} payload={}
+INFO  petstore GET /user/no_such_user_zzz_999 -> 404 (0.07s)

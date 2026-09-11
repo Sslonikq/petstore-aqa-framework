@@ -1,0 +1,2 @@
+INFO  petstore GET /pet/findByStatus params={'status': 'bogus'} payload={}
+INFO  petstore GET /pet/findByStatus -> 200 (0.07s)

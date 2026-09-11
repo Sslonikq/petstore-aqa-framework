@@ -1,1 +1,0 @@
-{"id":534774629,"username":"asilva","firstName":"Ashley","lastName":"Velazquez","email":"harrislisa@example.net","password":"@0i9$iWt9j","phone":"001-247-394-2660x8453","userStatus":1}
