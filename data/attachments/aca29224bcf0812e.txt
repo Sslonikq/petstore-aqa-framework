@@ -1,1 +1,0 @@
-{"takencutie":1,"totvs":5,"sold":145,"string":427,"pending":26,"pendding":1,"invalid":77,"not available":1,"available":265,"present":1,"soldout":1,"peric":24}

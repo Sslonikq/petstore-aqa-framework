@@ -1,0 +1,1 @@
+{"sold":153,"AAA":1,"string":538,"sold ":1,"NOT available":1,"pending":14,"available":249,"weisskeiner1":1,"Not Available":1,"soldout":1,"peric":2,"0":1,"null":2,"0.5":1,"not available":2,"true":1,"Available":1,"compradaTest":1}

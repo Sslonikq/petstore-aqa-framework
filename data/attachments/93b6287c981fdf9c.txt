@@ -1,0 +1,6 @@
+INFO  petstore POST /pet params={} payload={'id': 243031375, 'name': 'Teresa Henderson', 'photoUrls': ['https://placekittens.com/509/57'], 'status': 'available'}
+INFO  petstore POST /pet -> 200 (0.07s)
+INFO  petstore GET /pet/243031375 params={} payload={}
+INFO  petstore GET /pet/243031375 -> 200 (0.07s)
+INFO  petstore DELETE /pet/243031375 params={} payload={}
+INFO  petstore DELETE /pet/243031375 -> 200 (0.07s)

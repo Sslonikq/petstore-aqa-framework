@@ -1,0 +1,24 @@
+INFO  petstore POST /pet params={} payload={'id': 81270435, 'name': 'Rita Stewart', 'photoUrls': ['https://placekittens.com/996/453'], 'status': 'available'}
+INFO  petstore POST /pet -> 200 (0.07s)
+INFO  petstore GET /pet/81270435 params={} payload={}
+INFO  petstore GET /pet/81270435 params={} payload={}
+INFO  petstore GET /pet/81270435 params={} payload={}
+INFO  petstore GET /pet/81270435 params={} payload={}
+INFO  petstore GET /pet/81270435 params={} payload={}
+INFO  petstore GET /pet/81270435 params={} payload={}
+INFO  petstore GET /pet/81270435 params={} payload={}
+INFO  petstore GET /pet/81270435 params={} payload={}
+INFO  petstore GET /pet/81270435 params={} payload={}
+INFO  petstore GET /pet/81270435 params={} payload={}
+INFO  petstore GET /pet/81270435 -> 200 (0.29s)
+INFO  petstore GET /pet/81270435 -> 200 (0.30s)
+INFO  petstore GET /pet/81270435 -> 200 (0.31s)
+INFO  petstore GET /pet/81270435 -> 200 (0.32s)
+INFO  petstore GET /pet/81270435 -> 200 (0.32s)
+INFO  petstore GET /pet/81270435 -> 200 (0.32s)
+INFO  petstore GET /pet/81270435 -> 200 (0.32s)
+INFO  petstore GET /pet/81270435 -> 200 (0.33s)
+INFO  petstore GET /pet/81270435 -> 200 (0.33s)
+INFO  petstore GET /pet/81270435 -> 200 (0.35s)
+INFO  petstore DELETE /pet/81270435 params={} payload={}
+INFO  petstore DELETE /pet/81270435 -> 200 (0.08s)

@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 56822082,
+    "name": "Jacqueline Hernandez",
+    "photoUrls": [
+      "https://placekittens.com/424/350"
+    ],
+    "status": "sold"
+  }
+}

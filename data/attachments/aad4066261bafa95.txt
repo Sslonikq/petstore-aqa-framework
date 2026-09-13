@@ -1,0 +1,1 @@
+{"id":81270435,"name":"Rita Stewart","photoUrls":["https://placekittens.com/996/453"],"tags":[],"status":"available"}

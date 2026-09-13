@@ -1,1 +1,0 @@
-{"id":64528054,"name":"Jacqueline Cooley","photoUrls":["https://placekittens.com/657/698"],"tags":[],"status":"available"}

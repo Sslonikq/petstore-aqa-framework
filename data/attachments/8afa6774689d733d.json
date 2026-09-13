@@ -1,0 +1,11 @@
+{
+  "params": {},
+  "payload": {
+    "id": 736386864,
+    "name": "Paul King",
+    "photoUrls": [
+      "https://picsum.photos/54/104"
+    ],
+    "status": "available"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "params": {},
+  "payload": {
+    "id": 956302783,
+    "username": "craig46",
+    "firstName": "Updated",
+    "lastName": "Key",
+    "email": "updated@example.com",
+    "password": "a&X5PkEj^6",
+    "phone": "529-659-3468x28897",
+    "userStatus": 1
+  }
+}

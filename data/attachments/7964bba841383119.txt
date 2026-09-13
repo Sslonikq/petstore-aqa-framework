@@ -1,0 +1,6 @@
+INFO  petstore POST /pet params={} payload={'id': 164989808, 'name': 'Rebecca Brown', 'photoUrls': ['https://dummyimage.com/972x1003'], 'status': 'pending'}
+INFO  petstore POST /pet -> 200 (0.07s)
+INFO  petstore GET /pet/findByStatus params={'status': <PetStatus.PENDING: 'pending'>} payload={}
+INFO  petstore GET /pet/findByStatus -> 200 (0.07s)
+INFO  petstore DELETE /pet/164989808 params={} payload={}
+INFO  petstore DELETE /pet/164989808 -> 200 (0.07s)
